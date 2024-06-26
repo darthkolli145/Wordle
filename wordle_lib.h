@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-bool score_guess(char *secret, char *guess, char *result);
+bool score_guess(char *secret, char *guess, char *result); //score the guess
 
 bool valid_guess(char *guess, char **vocabulary, size_t num_words);
 
