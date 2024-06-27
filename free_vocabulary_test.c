@@ -41,3 +41,15 @@ int main(void) {
   expected_vocabulary[i++] = strdup("decor");
   expected_vocabulary[i++] = strdup("gawky");
   expected_vocabulary[i++] = strdup("jumpy");
+  expected_vocabulary[i++] = strdup("shaft");
+  expected_vocabulary[i++] = strdup("draft");
+  expected_vocabulary[i++] = strdup("belle");
+  expected_vocabulary[i++] = strdup("jiffy");
+
+  free_vocabulary(expected_vocabulary, 10);
+
+  printf("ran free_vocabulary\n");
+  printf("run this test with valgrind to know if it's working correctly!\n");
+
+  return 0;
+}
