@@ -30,3 +30,14 @@ int main(void) {
   expected_vocabulary[i++] = strdup("draft");
   expected_vocabulary[i++] = strdup("belle");
   expected_vocabulary[i++] = strdup("jiffy");
+  
+  free_vocabulary(expected_vocabulary, 20);
+
+  expected_vocabulary = calloc(20, sizeof(char *));
+  i = 0;
+  expected_vocabulary[i++] = strdup("clown");
+  expected_vocabulary[i++] = strdup("adobe");
+  expected_vocabulary[i++] = strdup("knack");
+  expected_vocabulary[i++] = strdup("decor");
+  expected_vocabulary[i++] = strdup("gawky");
+  expected_vocabulary[i++] = strdup("jumpy");
