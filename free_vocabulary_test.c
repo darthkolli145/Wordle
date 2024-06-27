@@ -16,3 +16,17 @@ int main(void) {
   expected_vocabulary[i++] = strdup("sleet");
   expected_vocabulary[i++] = strdup("oxide");
   expected_vocabulary[i++] = strdup("flour");
+  expected_vocabulary[i++] = strdup("copse");
+  expected_vocabulary[i++] = strdup("nobly");
+  expected_vocabulary[i++] = strdup("fraud");
+  expected_vocabulary[i++] = strdup("geese");
+  expected_vocabulary[i++] = strdup("clown");
+  expected_vocabulary[i++] = strdup("adobe");
+  expected_vocabulary[i++] = strdup("knack");
+  expected_vocabulary[i++] = strdup("decor");
+  expected_vocabulary[i++] = strdup("gawky");
+  expected_vocabulary[i++] = strdup("jumpy");
+  expected_vocabulary[i++] = strdup("shaft");
+  expected_vocabulary[i++] = strdup("draft");
+  expected_vocabulary[i++] = strdup("belle");
+  expected_vocabulary[i++] = strdup("jiffy");
