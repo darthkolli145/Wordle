@@ -4,3 +4,4 @@
 # run the worlde game
 # get 5 guesses
 # each letter when guessed gets a different marking
+# makefile for clang
