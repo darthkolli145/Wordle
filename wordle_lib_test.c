@@ -29,3 +29,12 @@ bool strings_equal_newline(char *expected, char *actual) {
   free(mycopy);
   return out;
 }
+
+bool word_in_vocabulary(char *word, char **vocabulary, size_t num_words) {
+  for (size_t i = 0; i < num_words; i++) {
+    if (strings_equal_newline(word, vocabulary[i])) {
+      return true;
+    }
+  }
+  return false;
+}
