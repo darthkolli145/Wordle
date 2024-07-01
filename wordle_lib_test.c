@@ -17,3 +17,15 @@ void ptr_should_be_equal(const char *message, void *expected, void *actual) {
          (expected == actual) ? "SUCCESS" : "FAILURE", expected, actual);
 }
 
+bool strings_equal_newline(char *expected, char *actual) {
+  char *mycopy = strdup(actual);
+
+  for (size_t i = 0; i < strlen(mycopy); i++) {
+    if (mycopy[i] == '\n') {
+      mycopy[i] = '\0';
+    }
+  }
+  bool out = !strcmp(expected, mycopy);
+  free(mycopy);
+  return out;
+}
