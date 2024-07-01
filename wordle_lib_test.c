@@ -38,3 +38,20 @@ bool word_in_vocabulary(char *word, char **vocabulary, size_t num_words) {
   }
   return false;
 }
+
+bool these_words_present(char **vocabulary, size_t num_words,
+                         char **expected_vocabulary,
+                         size_t expected_num_words) {
+  for (size_t i = 0; i < expected_num_words; i++) {
+    printf("vocabulary: %s\n", vocabulary[i]);
+  }
+  for (size_t i = 0; i < expected_num_words; i++) {
+    if (!word_in_vocabulary(expected_vocabulary[i], vocabulary, num_words)) {
+      printf("FAILURE: expected to find word %s\n", expected_vocabulary[i]);
+      return false;
+    }
+  }
+  printf("SUCCESS: all expected words present\n");
+  return true;
+}
+
