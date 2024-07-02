@@ -127,3 +127,20 @@ printf("\n**** tests for load_vocabulary ****\n");
   expected_vocabulary[i++] = strdup("draft");
   expected_vocabulary[i++] = strdup("belle");
   expected_vocabulary[i++] = strdup("jiffy");
+
+vocabulary = load_vocabulary("tinyvocabulary.txt", &num_words);
+  these_words_present(vocabulary, num_words, expected_vocabulary, 20);
+
+  bool no_strays = true;
+  no_strays = !word_in_vocabulary("irate", vocabulary, num_words) && no_strays;
+  no_strays = !word_in_vocabulary("wrong", vocabulary, num_words) && no_strays;
+  no_strays = !word_in_vocabulary("ff", vocabulary, num_words) && no_strays;
+  no_strays = !word_in_vocabulary("cumin", vocabulary, num_words) && no_strays;
+  no_strays = !word_in_vocabulary("witch", vocabulary, num_words) && no_strays;
+  if (no_strays) {
+    printf("SUCCESS: words that shouldn't be in vocabulary not present\n");
+  } else {
+    printf("FAILURE: stray words in vocabulary??\n");
+  }
+  free_vocabulary(vocabulary, 20);
+  free_vocabulary(expected_vocabulary, 20);
