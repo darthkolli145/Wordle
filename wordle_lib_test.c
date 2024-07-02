@@ -67,3 +67,17 @@ void check_score_guess(char *secret, char *guess, char *expected) {
   bool success = strings_equal_newline(expected, result);
   printf("%s: got %s\n", success ? "SUCCESS" : "FAILURE", result);
 }
+
+int main(void) {
+  printf("\n**** tests for valid_guess ****\n");
+  char **vocabulary = calloc(10, sizeof(char *));
+  vocabulary[0] = strdup("moody");
+  vocabulary[1] = strdup("sheep");
+  vocabulary[2] = strdup("hippy");
+  vocabulary[3] = strdup("sleet");
+  vocabulary[4] = strdup("oxide");
+  vocabulary[5] = strdup("flour");
+  vocabulary[6] = strdup("copse");
+  vocabulary[7] = strdup("nobly");
+  vocabulary[8] = strdup("fraud");
+  vocabulary[9] = strdup("geese");
