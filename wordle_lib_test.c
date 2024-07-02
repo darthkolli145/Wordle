@@ -55,3 +55,15 @@ bool these_words_present(char **vocabulary, size_t num_words,
   return true;
 }
 
+void check_score_guess(char *secret, char *guess, char *expected) {
+  printf("secret: %s, guess: %s, expected result: %s\n", secret, guess,
+         expected);
+
+  char result[7];
+  score_guess(secret, guess, result);
+
+  printf("score: %s\n", result);
+
+  bool success = strings_equal_newline(expected, result);
+  printf("%s: got %s\n", success ? "SUCCESS" : "FAILURE", result);
+}
