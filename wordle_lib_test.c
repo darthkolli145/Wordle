@@ -144,3 +144,16 @@ vocabulary = load_vocabulary("tinyvocabulary.txt", &num_words);
   }
   free_vocabulary(vocabulary, 20);
   free_vocabulary(expected_vocabulary, 20);
+
+printf("\n**** tests for score_guess ****\n");
+  check_score_guess("geese", "geese", "ggggg");
+  check_score_guess("geese", "lease", "xgxgg");
+  check_score_guess("adobe", "gawky", "xyxxx");
+  check_score_guess("gawky", "ykwag", "yygyy");
+
+  check_score_guess("naive", "overt", "xyyxx");
+  check_score_guess("nylon", "eject", "xxxxx");
+  check_score_guess("briny", "borax", "gxyxx");
+  check_score_guess("daisy", "metal", "xxxyx");
+}
+
