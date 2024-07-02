@@ -100,3 +100,30 @@ should_be_exactly_equal("moody in vocabulary", true,
   should_be_exactly_equal("geese in vocabulary", true,
                           valid_guess("geese", vocabulary, 10));
   free_vocabulary(vocabulary, 10);
+
+printf("\n**** tests for load_vocabulary ****\n");
+  size_t num_words;
+
+  char **expected_vocabulary;
+  expected_vocabulary = calloc(20, sizeof(char *));
+  int i = 0;
+  expected_vocabulary[i++] = strdup("moody");
+  expected_vocabulary[i++] = strdup("sheep");
+  expected_vocabulary[i++] = strdup("hippy");
+  expected_vocabulary[i++] = strdup("sleet");
+  expected_vocabulary[i++] = strdup("oxide");
+  expected_vocabulary[i++] = strdup("flour");
+  expected_vocabulary[i++] = strdup("copse");
+  expected_vocabulary[i++] = strdup("nobly");
+  expected_vocabulary[i++] = strdup("fraud");
+  expected_vocabulary[i++] = strdup("geese");
+  expected_vocabulary[i++] = strdup("clown");
+  expected_vocabulary[i++] = strdup("adobe");
+  expected_vocabulary[i++] = strdup("knack");
+  expected_vocabulary[i++] = strdup("decor");
+  expected_vocabulary[i++] = strdup("gawky");
+  expected_vocabulary[i++] = strdup("jumpy");
+  expected_vocabulary[i++] = strdup("shaft");
+  expected_vocabulary[i++] = strdup("draft");
+  expected_vocabulary[i++] = strdup("belle");
+  expected_vocabulary[i++] = strdup("jiffy");
