@@ -81,3 +81,22 @@ int main(void) {
   vocabulary[7] = strdup("nobly");
   vocabulary[8] = strdup("fraud");
   vocabulary[9] = strdup("geese");
+
+should_be_exactly_equal("moody in vocabulary", true,
+                          valid_guess("moody", vocabulary, 10));
+  should_be_exactly_equal("sleet in vocabulary", true,
+                          valid_guess("sleet", vocabulary, 10));
+  should_be_exactly_equal("irate not in vocabulary", false,
+                          valid_guess("irate", vocabulary, 10));
+  should_be_exactly_equal("raise not in vocabulary", false,
+                          valid_guess("raise", vocabulary, 10));
+
+  should_be_exactly_equal("ggggg not in vocabulary", false,
+                          valid_guess("ggggg", vocabulary, 10));
+  should_be_exactly_equal("jazzy not in vocabulary", false,
+                          valid_guess("jazzy", vocabulary, 10));
+  should_be_exactly_equal("oxide in vocabulary", true,
+                          valid_guess("oxide", vocabulary, 10));
+  should_be_exactly_equal("geese in vocabulary", true,
+                          valid_guess("geese", vocabulary, 10));
+  free_vocabulary(vocabulary, 10);
