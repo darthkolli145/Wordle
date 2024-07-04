@@ -2,7 +2,7 @@ CC = clang
 CFLAGS = -Wall -Wpedantic -Werror -Wextra
 
 all: wordle_game free_vocabulary_test wordle_lib_test
-
+#here?
 wordle_game: wordle_game.o wordle_lib.o
 	$(CC) wordle_game.o wordle_lib.o -o wordle_game
 
