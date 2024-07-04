@@ -20,7 +20,7 @@ wordle_lib.o: wordle_lib.c wordle_lib.h
 
 wordle_lib_test.o: wordle_lib_test.c wordle_lib.h
 	$(CC) $(CFLAGS) -c wordle_lib_test.c 
-
+#problem could be here
 free_vocabulary_test.o: free_vocabulary_test.c wordle_lib.h
 	$(CC) $(CFLAGS) -c free_vocabulary_test.c 
 
