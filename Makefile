@@ -29,6 +29,6 @@ clean:
 	rm -f wordle_game wordle_lib_test free_vocabulary_test
 	rm -f wordle_game.o wordle_lib.o wordle_lib_test.o \
 		free_vocabulary_test.o
-
+#clean should work
 format:
 	clang-format -i -style=file *.[ch]
