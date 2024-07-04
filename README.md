@@ -5,4 +5,4 @@
 # get 5 guesses
 # each letter when guessed gets a different marking
 # makefile for clang
-# tests are available to see what works
+# tests are available to see what work
