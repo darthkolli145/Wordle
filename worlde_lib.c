@@ -104,3 +104,4 @@ void free_vocabulary(char **vocabulary, size_t num_words) {
     }
     free(vocabulary);
 }
+

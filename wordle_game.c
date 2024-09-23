@@ -31,7 +31,6 @@ int main(void) {
   bool success = false;
 
   printf("time to guess a 5-letter word! (press ctrl-D to exit)\n");
-  // print statement
   while (!success) {
     printf("guess: ");
     if (fgets(guess, 80, stdin) == NULL) {
@@ -58,3 +57,4 @@ int main(void) {
 
   return 0;
 }
+
